@@ -17,8 +17,9 @@ nombre = input("Ingrese su nombre por favor: ")
 contacto = input("Ingrese su número de contacto por favor: ")
 direccion = input("Ingrese su dirección por favor: ")
 var_controlBln = True
-os.system('cls')
-while True:
+while var_controlBln == True:
+    os.system('cls')
+    
     print("\n1. Computador de escritorio")
     print("2. Tableta")
     print("3. Videobeam")
@@ -31,20 +32,20 @@ while True:
         cantidad_computador += 1
         total_pagar += var_PRECIOCOMPUTADOR
         print("Se agregó un Computador de escritorio a la factura.")
-    elif opcion == "2":
+    if opcion == "2":
         cantidad_tableta += 1
         total_pagar += var_PRECIOTABLETA
         print("Se agregó una Tableta a la factura.")
-    elif opcion == "3":
+    if opcion == "3":
         cantidad_videobeam += 1
         total_pagar += var_PRECIOVIDEOBEAM
         print("Se agregó un Videobeam a la factura.")
-    elif opcion == "4":
+    if opcion == "4":
         cantidad_televisor += 1
         total_pagar += var_PRECIOTELEVISOR
         print("Se agregó un Televisor a la factura.")
-    elif opcion == "5":
-        print("\nFactura para:", nombre)
+    if opcion == "5":
+        print("\n Factura para:", nombre)
         print("Contacto:", contacto)
         print("Dirección:", direccion)
         print("\nFactura de la compra:")
